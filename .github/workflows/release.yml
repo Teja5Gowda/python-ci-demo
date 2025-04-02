@@ -3,7 +3,10 @@ name: Create Release
 on:
   push:
     tags:
-      - 'v*'
+      - 'v*'  # Runs only on version tag pushes
+
+permissions:
+  contents: write  # Required to create and modify releases
 
 jobs:
   build:
